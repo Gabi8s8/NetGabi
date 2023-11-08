@@ -15,7 +15,7 @@
   --gunmetal-1: hsl(229, 15%, 21%);
   --gunmetal-2: hsl(216, 22%, 18%);
   --gainsboro: hsl(0, 7%, 88%);
-  --citrine: hsl(57, 97%, 45%);
+  --citrine: #94c6f8 /*hsl(57, 97%, 45%)*/;
   --xiketic: hsl(253, 21%, 13%);
   --gray-x: hsl(0, 0%, 74%);
   --white: hsl(0, 100%, 100%);
@@ -51,6 +51,25 @@
 /* -------------------------- */
 /* RESET
 /* -------------------------- */
+
+.h1,
+.h2,
+.h3 {
+  color: var(--white);
+  line-height: 40px;
+}
+
+.h1 {
+  font-size: var(--fs-1);
+}
+
+.h2 {
+  font-size: var(--fs-2);
+}
+
+.h3 {
+  font-size: var(--fs-6);
+}
 
 * {
   margin: 0;
@@ -150,7 +169,7 @@ button {
   transition: 0.25s ease-out;
 }
 
-.navbar-top{
+.navbar-top {
   padding: 30px 25px;
   display: flex;
   justify-content: space-between;
@@ -181,7 +200,7 @@ button {
   transition: var(--transition1);
 }
 
-.navbar-link:hover{
+.navbar-link:hover {
   color: var(--citrine);
 }
 
@@ -192,17 +211,17 @@ button {
   gap: 20px;
 }
 
-.navbar-social-link{
+.navbar-social-link {
   font-size: 20px;
   color: var(--white);
   transition: var(--transition1);
 }
 
-.navbar-social-link:hover{
+.navbar-social-link:hover {
   color: var(--citrine);
 }
 
-.overlay{
+.overlay {
   position: fixed;
   inset: 0;
   background: hsla(204, 18%, 11%, 0.8);
@@ -211,6 +230,40 @@ button {
   transition: var(--transition2);
 }
 
-.overlay.active{
+.overlay.active {
   pointer-events: all;
+}
+
+/* -------------------------- */
+/* BANNER
+/* -------------------------- */
+
+.hero {
+  background: url(../img/BannerFilme.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-block: var(--section-padding);
+}
+
+.hero-content {
+  margin-top: 60px;
+}
+
+.hero-subtitle {
+  color: var(--citrine);
+  font-size: var(--fs-4);
+  font-weight: var(--fw-700);
+  margin-bottom: 20px;
+}
+
+.hero-title {
+  margin-bottom: 50px;
+}
+
+.hero-title > strong {
+  color: var(--citrine);
 }
